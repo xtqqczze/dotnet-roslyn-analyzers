@@ -41,10 +41,10 @@
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\BannedSymbols.txt" Condition="'$(BannedSymbolsOptOut)' != 'true'" />
   </ItemGroup>
 
-  <Target Name="BeforeBuild" Condition="'$(ReleaseTrackingOptOut)' != 'true'" >
+  <!-- <Target Name="BeforeBuild" Condition="'$(ReleaseTrackingOptOut)' != 'true'" >
     <Error Condition="!Exists('$(MSBuildProjectDirectory)\AnalyzerReleases.Shipped.md')" Text="Create a new empty file named 'AnalyzerReleases.Shipped.md' in the project directory" />
     <Error Condition="!Exists('$(MSBuildProjectDirectory)\AnalyzerReleases.Unshipped.md')" Text="Create a new empty file named 'AnalyzerReleases.Unshipped.md' in the project directory" />
-  </Target>
+  </Target> -->
 
   <PropertyGroup>
     <!-- Workaround for https://github.com/dotnet/roslyn/issues/25041 -->
